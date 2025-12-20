@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CSI - Computer Society of India</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d121b] dark:text-white font-display">
+<div class="fixed inset-0 z-[100] flex items-center justify-center bg-white/90 dark:bg-[#0d121b]/95 backdrop-blur-lg transition-opacity duration-500">
+<div class="absolute inset-0 z-0 bg-[radial-gradient(#135bec_1px,transparent_1px)] [background-size:20px_20px] opacity-[0.05] dark:opacity-[0.15]"></div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="relative mb-10">
+<div class="absolute inset-0 rounded-2xl bg-primary/30 animate-ping duration-1000"></div>
+<div class="relative flex h-28 w-28 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-blue-600 text-white shadow-2xl shadow-primary/40 ring-1 ring-white/10">
+<span class="material-symbols-outlined text-[3.5rem]">terminal</span>
+</div>
+<div class="absolute -right-1 -top-1 h-3 w-3 animate-pulse rounded-full bg-blue-400 ring-2 ring-white dark:ring-[#0d121b]"></div>
+<div class="absolute -bottom-1 -left-1 h-3 w-3 animate-pulse rounded-full bg-blue-400 ring-2 ring-white dark:ring-[#0d121b] delay-300"></div>
+</div>
+<div class="flex flex-col items-center gap-2 text-center">
+<h1 class="text-4xl font-black tracking-tight text-slate-900 dark:text-white">CSI</h1>
+<p class="text-xs font-bold uppercase tracking-[0.25em] text-primary">Computer Society of India</p>
+</div>
+<div class="mt-10 flex gap-2.5">
+<div class="h-2.5 w-2.5 rounded-full bg-slate-400 dark:bg-slate-600 animate-bounce"></div>
+<div class="h-2.5 w-2.5 rounded-full bg-slate-400 dark:bg-slate-600 animate-bounce delay-100"></div>
+<div class="h-2.5 w-2.5 rounded-full bg-slate-400 dark:bg-slate-600 animate-bounce delay-200"></div>
+</div>
+</div>
+</div>
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-[#101622]/80 backdrop-blur-md">
+<div class="mx-auto flex h-16 max-w-[960px] items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-2xl">terminal</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">CSI</h2>
+</div>
+<nav class="hidden md:flex flex-1 justify-end gap-8">
+<a class="text-sm font-medium text-slate-700 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium text-slate-700 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors" href="#about">About</a>
+<a class="text-sm font-medium text-slate-700 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors" href="#events">Events</a>
+<a class="text-sm font-medium text-slate-700 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors" href="#team">Team</a>
+<a class="text-sm font-medium text-slate-700 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors" href="#contact">Contact</a>
+</nav>
+<div class="flex md:hidden">
+<button class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-200" type="button">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<section class="relative isolate overflow-hidden">
+<div class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.primary),white)] opacity-20 dark:bg-[radial-gradient(45rem_50rem_at_top,theme(colors.primary),#101622)]"></div>
+<div class="mx-auto max-w-[960px] px-6 py-24 sm:py-32 lg:px-8">
+<div class="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-16">
+<div class="flex-1 text-center lg:text-left">
+<div class="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-medium text-primary mb-6">
+<span class="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
+                            Recruitment Drive 2024 is Live!
+                        </div>
+<h1 class="text-4xl font-black tracking-tight text-slate-900 dark:text-white sm:text-6xl mb-4">
+                            Computer Society of India
+                        </h1>
+<p class="text-lg leading-8 text-slate-600 dark:text-slate-300 mb-8">
+                            Innovate. Create. Elevate. Join the largest student tech community on campus and shape the future of technology.
+                        </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+<button class="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all duration-200">
+                                Join the Community
+                            </button>
+<button class="inline-flex items-center justify-center rounded-lg border border-slate-300 dark:border-slate-700 bg-transparent px-6 py-3 text-sm font-bold text-slate-900 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-200">
+                                Learn More
+                            </button>
+</div>
+</div>
+<div class="flex-1 flex justify-center lg:justify-end">
+<div class="relative w-full max-w-[400px] aspect-square rounded-2xl bg-gradient-to-tr from-primary/20 to-transparent p-8 shadow-2xl ring-1 ring-gray-900/10 dark:ring-white/10 backdrop-blur-sm flex items-center justify-center">
+<div class="w-full h-full bg-contain bg-center bg-no-repeat" data-alt="Abstract network of nodes and connections representing technology" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD36m-x4RD0sQXkHCBr2k8Rap40gpyZxjQsFPvgyVgTCgXF90OVBYdeta-z49KZx-AQoSNuEt9tTO3zz1-8aCFWY2kQpo-yjjkIrsZxwOyujv72W_gfG78WAVbjOmyYi-CYxD4MvVraLwp0eIVkwJ0WCs1WpGpwLPTkv-4LkHVBaiVdTLEp5aHgFF6cU0njyzuhWR7vF5Y1RK8TI-p-ZVgpArhAgtftEllljwLL0V5LX-vpgDAzRKaFZCMuG0G7hH24i5mqR5Ty");'></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white dark:bg-slate-900 py-24 sm:py-32" id="about">
+<div class="mx-auto max-w-[960px] px-6 lg:px-8">
+<div class="mx-auto max-w-2xl lg:text-center">
+<h2 class="text-base font-semibold leading-7 text-primary">About Us</h2>
+<p class="mt-2 text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Who We Are</p>
+<p class="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300">
+                        We are a community dedicated to fostering technical growth and innovation among students. From coding workshops to national-level hackathons, we provide the platform for you to excel.
+                    </p>
+</div>
+<div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+<dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+<div class="flex flex-col items-start bg-slate-50 dark:bg-slate-800 p-8 rounded-2xl transition-transform hover:-translate-y-1 duration-300">
+<div class="rounded-lg bg-primary/10 p-2 ring-1 ring-primary/20">
+<span class="material-symbols-outlined text-primary text-2xl">school</span>
+</div>
+<dt class="mt-4 font-semibold text-slate-900 dark:text-white">Expert Workshops</dt>
+<dd class="mt-2 leading-7 text-slate-600 dark:text-slate-400">Hands-on sessions on AI, Web Dev, Cloud Computing, and more led by industry experts.</dd>
+</div>
+<div class="flex flex-col items-start bg-slate-50 dark:bg-slate-800 p-8 rounded-2xl transition-transform hover:-translate-y-1 duration-300">
+<div class="rounded-lg bg-primary/10 p-2 ring-1 ring-primary/20">
+<span class="material-symbols-outlined text-primary text-2xl">groups</span>
+</div>
+<dt class="mt-4 font-semibold text-slate-900 dark:text-white">Community</dt>
+<dd class="mt-2 leading-7 text-slate-600 dark:text-slate-400">Join a vibrant network of like-minded peers, alumni, and mentors.</dd>
+</div>
+<div class="flex flex-col items-start bg-slate-50 dark:bg-slate-800 p-8 rounded-2xl transition-transform hover:-translate-y-1 duration-300">
+<div class="rounded-lg bg-primary/10 p-2 ring-1 ring-primary/20">
+<span class="material-symbols-outlined text-primary text-2xl">trophy</span>
+</div>
+<dt class="mt-4 font-semibold text-slate-900 dark:text-white">Competitions</dt>
+<dd class="mt-2 leading-7 text-slate-600 dark:text-slate-400">Showcase your skills in hackathons and coding contests with exciting prizes.</dd>
+</div>
+</dl>
+</div>
+</div>
+</section>
+<section class="py-24 sm:py-32 bg-slate-50 dark:bg-[#101622]" id="events">
+<div class="mx-auto max-w-[960px] px-6 lg:px-8">
+<div class="flex items-center justify-between mb-12">
+<div>
+<h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">Upcoming Events</h2>
+<p class="mt-2 text-slate-600 dark:text-slate-400">Don't miss out on what's happening next.</p>
+</div>
+<a class="hidden sm:flex items-center gap-1 text-sm font-semibold text-primary hover:text-blue-600" href="#">
+                        View all events <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group flex flex-col overflow-hidden rounded-2xl bg-white dark:bg-slate-800 shadow-sm ring-1 ring-slate-200 dark:ring-slate-700 hover:shadow-lg transition-shadow duration-300">
+<div class="aspect-video w-full bg-slate-200 dark:bg-slate-700 relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Students collaborating on laptops during a hackathon event" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzD2PwSSKU7ePTnlWl1F_mMZWIwDA5CZoAWyJp3JYWdPYlkoYy9Q0orYLZd7TT8ZANvCnhO06eroBWIRxfDVo53eGF5CvCH4pL4i3nsxv0VLZTVmbtjg_c0T5131uY9Q5_8qlOkMU3GZi0q3E1Jj2SOUCDYVKzu3slJOfqJgwAis6ydmhJJG3M6Xr759JsjUPdTkKNRgVEIhoop-tNVW8dtfNWIdxEYKmtULXRMFI3bBOhjDqouf484IKPr40cHG8kwVoWotIR");'></div>
+<div class="absolute top-4 left-4 rounded-md bg-white/90 dark:bg-slate-900/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white backdrop-blur-sm shadow-sm">
+                                Oct 20
+                             </div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Annual Hackathon</h3>
+<div class="mt-2 flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-base">location_on</span>
+                                Main Auditorium
+                            </div>
+<p class="mt-4 flex-1 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                                24 hours of coding, innovation, and fun. Build solutions for real-world problems.
+                            </p>
+<div class="mt-6">
+<button class="w-full rounded-lg bg-primary/10 py-2.5 text-sm font-bold text-primary hover:bg-primary hover:text-white transition-all duration-200">
+                                    Register Now
+                                </button>
+</div>
+</div>
+</div>
+<div class="group flex flex-col overflow-hidden rounded-2xl bg-white dark:bg-slate-800 shadow-sm ring-1 ring-slate-200 dark:ring-slate-700 hover:shadow-lg transition-shadow duration-300">
+<div class="aspect-video w-full bg-slate-200 dark:bg-slate-700 relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Speaker presenting slides about Artificial Intelligence on a projector" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDUwAyED8RBonukmmZOsXSw-LgyHPoHc_gG7rhmOghuvwCOcE-ZuDUv1BxuXc4lNBFIqnkojPVYUozzd181jaqCgEpjD_ZUYSvlbK02GvmOfthjgEo_Sqo3eUs1-LOW9WvVeIyF8cOMf_HhhP9ODL0-NHK_7C8KXEwSiHvJQ9iu5S889ow73UQXsq_lJ1oY7Q8QWYmusQC701zrH15FnPOicj3Dq4wG5Z9Ntl4ZsxVfQ-CH4gRPBSvOScDBAwCvO2XF8CcqB6A1");'></div>
+<div class="absolute top-4 left-4 rounded-md bg-white/90 dark:bg-slate-900/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white backdrop-blur-sm shadow-sm">
+                                Nov 05
+                             </div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">AI &amp; ML Workshop</h3>
+<div class="mt-2 flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-base">location_on</span>
+                                CS Lab 2
+                            </div>
+<p class="mt-4 flex-1 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                                A deep dive into the basics of Machine Learning with Python. Beginner friendly.
+                            </p>
+<div class="mt-6">
+<button class="w-full rounded-lg bg-primary/10 py-2.5 text-sm font-bold text-primary hover:bg-primary hover:text-white transition-all duration-200">
+                                    Register Now
+                                </button>
+</div>
+</div>
+</div>
+<div class="group flex flex-col overflow-hidden rounded-2xl bg-white dark:bg-slate-800 shadow-sm ring-1 ring-slate-200 dark:ring-slate-700 hover:shadow-lg transition-shadow duration-300">
+<div class="aspect-video w-full bg-slate-200 dark:bg-slate-700 relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="A professional giving a guest lecture to a room of students" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCDJ8S0twpseaiUahAJT5ysmPgdkMUxjgxoWKHC8-FonE-601f0OWPUKZzVpQ0FvZ4hNbGvDpMQ-HsCr8HrSxGAJh3odeIZozuUEx8ZWL-42k0LIrR5-tKQ3Xtd-dcwO22kH4g862SJStxbhgNB5mT7FpWQaOZPD3qCMNTz_n4k1ZU6qvBGpcql-KdCK0Y7hh9DmGXRIXCXf6vjIzVH1cbuqFQfpWYG1cKtt3kTPwr2UipAnXF9pqDoSAkJicxel48d6Fw7p5Z");'></div>
+<div class="absolute top-4 left-4 rounded-md bg-white/90 dark:bg-slate-900/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white backdrop-blur-sm shadow-sm">
+                                Nov 15
+                             </div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Tech Talk Series</h3>
+<div class="mt-2 flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-base">location_on</span>
+                                Conference Hall
+                            </div>
+<p class="mt-4 flex-1 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                                Industry leaders sharing their journey and insights on the future of tech jobs.
+                            </p>
+<div class="mt-6">
+<button class="w-full rounded-lg bg-primary/10 py-2.5 text-sm font-bold text-primary hover:bg-primary hover:text-white transition-all duration-200">
+                                    Register Now
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 sm:hidden flex justify-center">
+<a class="flex items-center gap-1 text-sm font-semibold text-primary hover:text-blue-600" href="#">
+                        View all events <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<footer class="bg-slate-900 dark:bg-[#0a0e17] text-slate-300 py-16" id="contact">
+<div class="mx-auto max-w-[960px] px-6 lg:px-8">
+<div class="grid grid-cols-1 gap-12 lg:grid-cols-3">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3 text-white">
+<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined text-xl">terminal</span>
+</div>
+<h2 class="text-lg font-bold">CSI Student Chapter</h2>
+</div>
+<p class="text-sm leading-6 text-slate-400">
+                            Empowering students with technical skills and professional networking opportunities since 2010.
+                        </p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-white transition-colors" href="#">
+<span class="sr-only">LinkedIn</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-slate-400 hover:text-white transition-colors" href="#">
+<span class="sr-only">GitHub</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-slate-400 hover:text-white transition-colors" href="#">
+<span class="sr-only">Instagram</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.416 2.045c.636-.247 1.363-.416 2.427-.465C8.901 1.534 9.256 1.534 12.315 1.534h-.001c3.059 0 3.414 0 4.439.047 1.024.047 1.379.06 3.808.06v.08c0 2.43-.013 2.784-.06 3.808-.049 1.064-.218 1.791-.465 2.427-.247.636-.56 1.153-1.153 1.772-.593.619-1.11 1.153-1.772 1.153-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465 1.024-.047 1.379-.06 3.808-.06z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-sm font-semibold text-white uppercase tracking-wider">Contact Us</h3>
+<ul class="flex flex-col gap-3 text-sm text-slate-400">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">location_on</span>
+<span>123 University Campus,<br/>Tech Block B, Room 304</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">mail</span>
+<a class="hover:text-white transition-colors" href="mailto:csi@college.edu">csi@college.edu</a>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">call</span>
+<a class="hover:text-white transition-colors" href="tel:+911234567890">+91 98765 43210</a>
+</li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-sm font-semibold text-white uppercase tracking-wider">Find Us</h3>
+<div class="h-40 w-full overflow-hidden rounded-lg bg-slate-800 ring-1 ring-white/10 relative">
+<div class="w-full h-full bg-cover bg-center grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300" data-alt="Map showing the location of the university campus" data-location="University Campus Map" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAFiVvkQsHy5pL1azAps2LzhRStKD6SefFDy_7OxBQPinA3m6ZsfCk8IPb7BDFmOutyO0qW6AMf5hhulVGxo00Uwq1m5dhNmjj1GmoFoxchVCcBNwuuok5F20Fbgqmy7BU4v8R45JVqlzvLGLXb8XL0a9qQO6VOCEiaB2mGkO8gIMXM0rl_C5FVyYeq1tGRBnDDzsaCxmI6TolCc6tjn5rF_L0rEXd9C04qkoewdv288z0vIZUK6yvboOoAdstd04r_CoT-pyPw");'></div>
+</div>
+</div>
+</div>
+<div class="mt-12 border-t border-slate-800 pt-8">
+<p class="text-center text-xs leading-5 text-slate-500">
+                        © 2024 Computer Society of India Student Chapter. All rights reserved.
+                    </p>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

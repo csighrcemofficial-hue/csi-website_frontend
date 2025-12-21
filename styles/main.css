@@ -76,21 +76,20 @@
 
 /* Glass morphism effect */
 .glass-effect {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(15, 11, 11, 0.1);
+    backdrop-filter: blur(100px);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 /* Animated Gradient Background */
 .bg-gradient-animated {
     background: linear-gradient(-45deg, 
-        #3b82f6, 
-        #8b5cf6, 
-        #06b6d4, 
-        #3b82f6, 
-        #8b5cf6
+    
+        #000000, 
+        #135956, 
+        #000000
     );
     background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
+    animation: gradientShift 10s ease infinite;
 }
 
 @keyframes gradientShift {

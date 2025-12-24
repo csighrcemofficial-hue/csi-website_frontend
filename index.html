@@ -7,47 +7,82 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="s    tylesheet" href="styles/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="app.js"></script>
     <script src="controllers/mainController.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+
+    <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#2563eb", // blue-600
+            "background-dark": "#0f172a", // slate-900
+          },
+          fontFamily: {
+            display: ["Poppins", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem", // 8px
+          },
+        },
+      },
+    };
+  </script>
+
+  </style>
+
 </head>
-<body ng-controller="MainController" class="bg-gray-50 font-inter">
+<body ng-controller="MainController" class="bg-background-dark text-slate-800 font-inter">
 
     <!-- Navigation -->
-   <nav class="fixed w-full bg-black backdrop-blur-lg transition-all duration-300 z-50 shadow-lg shadow-black/20 ">
-    <div class="max-w-7xl mx-auto px-6 py-4">
-        <div class="flex justify-between items-center">
+<div class="relative min-h-screen">
+<header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl">
+<nav class="flex items-center justify-between p-4 rounded-xl shadow-lg glass-effect">
+<div class="flex items-center space-x-3">
+<img src="assets/LOGO.png" alt="CSI Logo" class="h-12 w-auto">
+<div class="hidden sm:block">
+<h1 class="font-bold text-sm md:text-base text-white">Computer Society of India</h1>
+<p class="text-xs text-slate-300">Student Chapter - GHRCEM</p>
+</div>
+</div>
+<div class="hidden lg:flex items-center space-x-8 ml-auto">
+<a class="text-slate-300 hover:text-primary transition-colors font-medium" href="#home">Home</a>
+<a class="text-slate-300 hover:text-primary transition-colors font-medium" href="#about">About</a>
+<a class="text-slate-300 hover:text-primary transition-colors font-medium" href="#events">Events</a>
+<a class="text-slate-300 hover:text-primary transition-colors font-medium" href="#">Team</a>
+<a class="text-slate-300 hover:text-primary transition-colors font-medium" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-2">
 
-            <div class="flex items-center space-x-3">
-                <img src="assets/LOGO.png" alt="CSI Logo" class="h-12 w-auto">
-                <div>
-                    <h1 class="text-xl font-bold text-gray-200">
-                        Computer Society of India
-                    </h1>
-                    <p class="text-sm text-gray-400">
-                        Student Chapter - GHRCEM
-                    </p>
-                </div>
-            </div>
-
-            <div class="hidden md:flex space-x-8">
-                <a href="#home" class="text-gray-300 hover:text-white font-medium transition">Home</a>
-                <a href="#about" class="text-gray-300 hover:text-white font-medium transition">About</a>
-                <a href="#activities" class="text-gray-300 hover:text-white font-medium transition">Activities</a>
-                <a href="#events" class="text-gray-300 hover:text-white font-medium transition">Events</a>
-                <a href="#team" class="text-gray-300 hover:text-white font-medium transition">Team</a>
-                <a href="#contact" class="text-gray-300 hover:text-white font-medium transition">Contact</a>
-            </div>
-
-            <button class="md:hidden text-gray-300 hover:text-white transition">
+    <button id="menu-btn" class="lg:hidden text-gray-300 hover:text-white transition">
                 <i class="fas fa-bars text-xl"></i>
             </button>
 
-        </div>
-    </div>
-</nav>
 
+<!-- Mobile Menu -->
+<div id="mobile-menu"
+     class="lg:hidden absolute top-full left-0 mt-3 w-full
+            hidden overflow-hidden rounded-xl
+            backdrop-blur-xl bg-white/10 border border-white/20
+            shadow-xl">
+
+    <div class="flex flex-col divide-y divide-white/10">
+        <a href="#home" class="px-6 py-4 text-slate-200 hover:bg-white/10 transition">Home</a>
+        <a href="#about" class="px-6 py-4 text-slate-200 hover:bg-white/10 transition">About</a>
+        <a href="#events" class="px-6 py-4 text-slate-200 hover:bg-white/10 transition">Events</a>
+        <a href="#team" class="px-6 py-4 text-slate-200 hover:bg-white/10 transition">Team</a>
+        <a href="#contact" class="px-6 py-4 text-slate-200 hover:bg-white/10 transition">Contact</a>
+    </div>
+</div>
+
+
+</div>
+</nav>
+</header>
 
 
     <!-- Hero Section with Gradient Background -->
@@ -65,17 +100,12 @@
     </div>
 
     <!-- Dark Overlay -->
-    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="absolute inset-0"></div>
         <!-- Main Gradient -->
-        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="absolute inset-0 bg-black/10"></div>
         
         <!-- Animated Gradient Overlay -->
         <div class="absolute inset-0 bg-gradient-animated opacity-80"></div>
-        
-        <!-- Floating Elements -->
-        <!-- <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float-slow"></div>
-        <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float-medium"></div>
-        <div class="absolute top-1/2 left-1/3 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl animate-float-fast"></div> -->
         
     </div>
     
@@ -86,15 +116,12 @@
                 <div class="relative">
                     <img src="assets/LOGO.png" alt="CSI Logo" 
                          class="h-24 w-auto drop-shadow-2xl animate-pulse-slow">
-                    <div class="absolute -inset-4 bg-blue-500/20 blur-xl rounded-full"></div>
+                    <div class="absolute -inset-4 bg-slate-600/20 blur-lg rounded-full"></div>
                 </div>
             </div>
             
             <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                <!-- <span class="bg-gradient-to-r from-blue-400 via-cyan-300 to-purple-400 bg-clip-text text-transparent">
-                    CSI
-                </span> -->
-
+               
                 <span class="text-white bg-clip-text text-transparent">
                     CSI
                 </span>
@@ -102,8 +129,8 @@
             </h1>
             
             <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-blue-100 font-light">
-                Where <span class="font-bold text-cyan-300">Innovation</span> meets 
-                <span class="font-bold text-purple-300">Excellence</span>
+                Where <span class="font-bold text-white">Innovation</span> meets 
+                <span class="font-bold text-white">Excellence</span>
             </p>
             
             <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"><b>
@@ -114,15 +141,15 @@
             <!-- CTA Buttons -->
             <div class="flex flex-col sm:flex-row justify-center gap-6 mt-12">
                 <a href="#events" 
-                   class="group relative overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/30">
+                   class="group relative overflow-hidden bg-gradient-to-r from-black text-white px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/30">
                     <span class="relative z-10">Explore Events <i class="fas fa-arrow-right ml-3 group-hover:ml-4 transition-all"></i></span>
-                    <div class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-black to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </a>
                 
                 <a href="#join" 
-                   class="group relative overflow-hidden border-2 border-white/30 text-white px-10 py-4 rounded-xl font-bold text-lg backdrop-blur-sm transition-all duration-300 hover:border-white/60 hover:bg-white/10">
-                    <span class="relative z-10">Join Our Community</span>
-                    <div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                   class="group relative overflow-hidden bg-gradient-to-r from-black text-white px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/30">
+                    <span class="relative z-10">Join Our Community <i class="fas fa-arrow-right ml-3 group-hover:ml-4 transition-all"></i></span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-black to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </a>
             </div>
             
@@ -133,92 +160,64 @@
                 </a>
             </div>
         </div>
-        
-        <!-- Stats Cards - Floating Above -->
-        <!-- <div class="mt-24 grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="glass-card group transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/20"
-                 ng-repeat="stat in stats">
-                <div class="relative">
-                    <div class="text-4xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
-                        {{stat.value}}<span ng-if="stat.plus">+</span>
-                    </div>
-                    <div class="text-blue-200 text-sm">{{stat.label}}</div>
-                    <div class="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 group-hover:w-full transition-all duration-500"></div>
-                </div>
-            </div>
-        </div>                   COMMENTED OUT PART 1-->
+
     </div>
+
+    <div class="absolute bottom-0 left-0 w-full h-16 
+            bg-gradient-to-b from-transparent via-background-dark/60 to-background-dark pointer-events-none">
+</div>
 </section>
-            
-            <!-- Stats -->
-            <!-- <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center">
-                    <div class="text-3xl font-bold text-white mb-2">{{stats.studentsRegistered}}+</div>
-                    <div class="text-blue-200">Students Registered</div>
-                </div>
-                <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center">
-                    <div class="text-3xl font-bold text-white mb-2">{{stats.activities}}+</div>
-                    <div class="text-blue-200">Activities Conducted</div>
-                </div>
-                <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center">
-                    <div class="text-3xl font-bold text-white mb-2">{{stats.studentsBenefited}}+</div>
-                    <div class="text-blue-200">Students Benefited</div>
-                </div>
-                <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center">
-                    <div class="text-3xl font-bold text-white mb-2">AY {{stats.currentYear}}</div>
-                    <div class="text-blue-200">Active Year</div>
-                </div>
-            </div>                 COMMENTED OUT PART 2 -->                           
-        </div>
-    </section>
+                            
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
+
+    <section id="about" class="py-20 bg-background-dark">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Mission & Objectives</h2>
-                <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+            <div class="text-center mb-16"><br><br>
+                <h2 class="text-4xl font-bold text-gray-300 mb-4">Our Mission & Objectives</h2>
+                <p class="text-gray-400 text-lg max-w-3xl mx-auto">
                     Empowering future technocrats with industry-relevant skills and innovation-driven learning.
                 </p>
             </div>
             
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Chapter Objectives</h3>
+                    <h3 class="text-2xl font-bold text-white mb-6">Chapter Objectives</h3>
                     <ul class="space-y-4">
                         <li class="flex items-start" ng-repeat="objective in objectives">
-                            <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
-                            <span class="text-gray-700">{{objective}}</span>
+                            <i class="fas fa-check-circle text-white mt-1 mr-3"></i>
+                            <span class="text-white">{{objective}}</span>
                         </li>
                     </ul>
                     
-                    <div class="mt-12 p-6 bg-blue-50 rounded-xl">
-                        <h4 class="text-xl font-bold text-gray-900 mb-4">Leadership Team</h4>
+                    <div class="mt-12 p-6 bg-black border border-white/20 rounded-xl shadow-lg shadow-black/50">
+
+                        <h4 class="text-xl font-bold text-white mb-4">Leadership Team</h4>
                         <div class="space-y-4">
                             <div>
-                                <p class="font-semibold text-gray-900">Branch Counsellor</p>
-                                <p class="text-gray-600">Dr. Poonam Gupta (HoD IT)</p>
+                                <p class="font-semibold text-gray-400">Branch Counsellor</p>
+                                <p class="text-white">Dr. Poonam Gupta (HoD IT)</p>
                             </div>
                             <div>
-                                <p class="font-semibold text-gray-900">Coordinator</p>
-                                <p class="text-gray-600">Ms. Juhi Agrawal</p>
+                                <p class="font-semibold text-gray-400">Coordinator</p>
+                                <p class="text-white">Ms. Juhi Agrawal</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="relative">
-                    <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8 transform rotate-3">
-                        <div class="bg-white rounded-xl p-8 transform -rotate-3 shadow-2xl">
-                            <h4 class="text-2xl font-bold text-gray-900 mb-6">Growth Over Years</h4>
+                    <div class="bg-gray-200 rounded-2xl p-8 transform rotate-3 shadow-lg shadow-black/50">
+                        <div class="bg-gradient-to-br from-black to-blue-900 rounded-xl p-8 transform -rotate-3 shadow-2xl shadow-lg shadow-black/50">
+                            <h4 class="text-2xl font-bold text-white mb-6">Growth Over Years</h4>
                             <div class="space-y-6">
                                 <div ng-repeat="year in yearlyStats">
                                     <div class="flex justify-between mb-2">
-                                        <span class="font-medium text-gray-700">AY {{year.year}}</span>
-                                        <span class="font-bold text-blue-600">{{year.students}} Students</span>
+                                        <span class="font-medium text-gray-200">AY {{year.year}}</span>
+                                        <span class="font-bold text-white">{{year.students}} Students</span>
                                     </div>
-                                    <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
-                                        <div class="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" 
+                                    <div class="h-2 bg-slate-900 rounded-full overflow-hidden">
+                                        <div class="h-full bg-white" 
                                              style="width: {{(year.students / 800) * 100}}%"></div>
                                     </div>
                                 </div>
@@ -230,8 +229,42 @@
         </div>
     </section>
 
+
+      <!-- Upcoming Events -->
+    <section id="events" class="py-20 bg-background-dark">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16"><br><br>
+                <h2 class="text-4xl font-bold text-white mb-4">Upcoming Events</h2>
+                <p class="text-gray-300 text-lg">Stay updated with our future events</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="border-2 border-dashed border-blue-200 rounded-2xl p-6 hover:border-blue-400 transition group" 
+                     ng-repeat="event in upcomingEvents">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-blue-600 text-white p-3 rounded-lg mr-4">
+                            <div class="text-2xl font-bold">{{event.day}}</div>
+                            <div class="text-sm">{{event.month}}</div>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white group-hover:text-blue-600 transition">{{event.title}}</h4>
+                            <p class="text-gray-500 text-sm">{{event.time}}</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-200 mb-4">{{event.description}}</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-blue-600 font-semibold">{{event.type}}</span>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+                            Register Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Activities & Gallery -->
-    <section id="activities" class="py-20 bg-gray-50">
+    <!-- <section id="activities" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">Recent Activities</h2>
@@ -256,69 +289,14 @@
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Upcoming Events -->
-    <section id="events" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
-                <p class="text-gray-600 text-lg">Stay updated with our future events</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="border-2 border-dashed border-blue-200 rounded-2xl p-6 hover:border-blue-400 transition group" 
-                     ng-repeat="event in upcomingEvents">
-                    <div class="flex items-start mb-4">
-                        <div class="bg-blue-600 text-white p-3 rounded-lg mr-4">
-                            <div class="text-2xl font-bold">{{event.day}}</div>
-                            <div class="text-sm">{{event.month}}</div>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition">{{event.title}}</h4>
-                            <p class="text-gray-500 text-sm">{{event.time}}</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">{{event.description}}</p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-blue-600 font-semibold">{{event.type}}</span>
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
-                            Register Now
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Winners & Achievements -->
-    <!-- <section id="winners" class="py-20 bg-gradient-to-r from-blue-900 to-purple-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-white mb-4">Our Achievements</h2>
-                <p class="text-blue-200 text-lg">Celebrating excellence and innovation</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center transform transition hover:scale-105" 
-                     ng-repeat="winner in winners">
-                    <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white/30">
-                        <img ng-src="{{winner.image}}" alt="{{winner.name}}" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="text-xl font-bold text-white mb-2">{{winner.name}}</h4>
-                    <p class="text-blue-200 mb-3">{{winner.position}}</p>
-                    <p class="text-white/80 text-sm">{{winner.achievement}}</p>
-                </div>
-            </div>
-        </div>
     </section> -->
 
     <!-- Newsletter -->
-    <section id="newsletter" class="py-20 bg-gray-50">
+    <section id="newsletter" class="py-20 bg-background-dark">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <div class="bg-white rounded-2xl p-8 md:p-12 shadow-xl">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Stay Updated</h2>
-                <p class="text-gray-600 mb-8">Subscribe to our newsletter for the latest updates and event notifications</p>
+            <div class="bg-black border-white/20 rounded-xl rounded-2xl p-8 md:p-12 shadow-xl">
+                <h2 class="text-3xl font-bold text-white mb-4">Stay Updated</h2>
+                <p class="text-gray-300 mb-8">Subscribe to our newsletter for the latest updates and event notifications</p>
                 
                 <form ng-submit="subscribeNewsletter()" class="max-w-md mx-auto">
                     <div class="flex flex-col sm:flex-row gap-4">
@@ -326,64 +304,58 @@
                                class="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"
                                placeholder="Enter your email" required>
                         <button type="submit" 
-                                class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition">
+                                class="bg-blue-600 hover:bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold transition">
                             Subscribe
                         </button>
                     </div>
                 </form>
                 
-                <p class="text-sm text-gray-500 mt-4">Join {{newsletterSubscribers}}+ subscribers</p>
+                <p class="text-sm text-gray-400 mt-4">Join {{newsletterSubscribers}}+ subscribers</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer id="contact" class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div>
-                    <div class="flex items-center space-x-3 mb-6">
-                        <img src="assets/logo.png" alt="CSI Logo" class="h-12 w-auto">
-                        <div>
-                            <h3 class="text-xl font-bold">CSI Student Chapter</h3>
-                            <p class="text-gray-400 text-sm">GHRCEM</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 mb-6">Empowering the next generation of IT professionals through innovation and collaboration.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-github text-xl"></i></a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
-                        <li><a href="#events" class="text-gray-400 hover:text-white transition">Events</a></li>
-                        <li><a href="#activities" class="text-gray-400 hover:text-white transition">Activities</a></li>
-                        <li><a href="#team" class="text-gray-400 hover:text-white transition">Team</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-6">Contact Us</h4>
-                    <div class="space-y-3">
-                        <p class="text-gray-400"><i class="fas fa-map-marker-alt mr-3"></i> GHRCEM, Nagpur</p>
-                        <p class="text-gray-400"><i class="fas fa-envelope mr-3"></i> csi@ghrcem.ac.in</p>
-                        <p class="text-gray-400"><i class="fas fa-phone mr-3"></i> +91 XXXX XXX XXX</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
-                <p>&copy; {{currentYear}} Computer Society of India - Student Chapter GHRCEM. All rights reserved.</p>
+           <div class="grid md:grid-cols-2 gap-8">
+    <!-- Left side -->
+    <div>
+        <div class="flex items-center space-x-3 mb-6">
+            <img src="assets/logo.png" alt="CSI Logo" class="h-12 w-auto">
+            <div>
+                <h3 class="text-xl font-bold">CSI Student Chapter</h3>
+                <p class="text-gray-400 text-sm">GHRCEM</p>
             </div>
         </div>
-    </footer>
+        <p class="text-gray-400 mb-6">
+            Empowering the next generation of IT professionals through innovation and collaboration.
+        </p>
+        <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition">
+                <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition">
+                <i class="fab fa-instagram text-xl"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Right side -->
+    <div class="md:justify-self-end text-right">
+        <h4 class="text-xl font-bold mb-6">Contact Us</h4>
+        <div class="space-y-3">
+            <p class="text-gray-400">
+                <i class="fas fa-map-marker-alt mr-3"></i> GHRCEM, Pune
+            </p>
+            <p class="text-gray-400">
+                <i class="fas fa-envelope mr-3"></i> csighrcemofficial@gmail.com
+            </p>
+        </div>
+    </div>
+</div>
+</div>
+</footer>
 
 </body>
 </html>

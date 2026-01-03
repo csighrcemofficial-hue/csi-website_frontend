@@ -34,13 +34,6 @@ html {
 
 
 
-/* Card hover effects */
-.hover-lift:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-
 
 /* Animation classes */
 @keyframes fadeInUp {
@@ -91,9 +84,7 @@ html {
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);border: 1px solid rgba(255, 255, 255, 0.2);
     }
-    .dark .glass-effect {
-      background-color: rgba(15, 23, 42, 0.1);border-color: rgba(255, 255, 255, 0.1);
-    }
+   
     
 @keyframes gradientShift {
     0% {
@@ -156,30 +147,9 @@ html {
     animation: float-fast 15s linear infinite;
 }
 
-/* Glass Morphism Effect */
-.glass-card {
-    background: rgba(255, 255, 255, 0.07);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 24px;
-    transition: all 0.3s ease;
-}
-
-.glass-card:hover {
-    background: rgba(255, 255, 255, 0.12);
-    border-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
 
 
-.binary-digit {
-    position: absolute;
-    color: rgba(59, 130, 246, 0.3);
-    font-family: monospace;
-    font-size: 14px;
-    animation: fall linear infinite;
-}
+
 
 
 @keyframes fall {
@@ -267,21 +237,6 @@ html {
     background: rgba(255, 255, 255, 0.3);
 }
 
-/* Gradient Text Effects */
-.text-gradient-primary {
-    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #22d3ee 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.text-gradient-secondary {
-    background: linear-gradient(135deg, #f472b6 0%, #fbbf24 50%, #34d399 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .binary-digit {
@@ -291,4 +246,14 @@ html {
     .glass-card {
         padding: 16px;
     }
+
+
+    .dot {
+  transition: all 0.3s ease;
+}
+.dot.active {
+  background: white;
+  transform: scale(1.4);
+}
+
 }

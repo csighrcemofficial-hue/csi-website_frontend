@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSI GHRCEM Team</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/mainController.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link rel="stylesheet" href="styles/team.css">
+    
+
+</head>
+
+<body class="text-white overflow-x-hidden">
+
+
+ <header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl">
+<nav class="relative flex items-center justify-between p-4 rounded-xl shadow-lg glass-effect">
+<div class="flex items-center space-x-3">
+<img src="assets/LOGO.png" alt="CSI Logo" class="h-14 w-auto">
+<div class="hidden sm:flex flex-col justify-center">
+<h1 class="font-bold text-sm md:text-base text-white">
+Computer Society of India</h1>
+<p class="text-xs text-slate-300 leading-none mt-0.5">
+Student Chapter - GHRCEM</p>
+</div>
+</div>
+<div class="hidden lg:flex items-center space-x-8 ml-auto">
+<a class="text-slate-300 hover:text-blue-500 font-medium" href="index.html">Home</a>
+<a class="text-slate-300 hover:text-blue-500 font-medium" href="index.html#about">About</a>
+<a class="text-slate-300 hover:text-blue-500 font-medium" href="event.html">Events</a>
+<a class="text-slate-300 hover:text-blue-500 font-medium" href="#">Team</a>
+<a class="text-slate-300 hover:text-blue-500 font-medium" href="index.html#contact">Contact</a>
+</div>
+<div class="flex items-center gap-2">
+
+    <button id="menu-btn" class="lg:hidden text-gray-300 hover:text-white transition">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+
+
+<!-- Mobile Menu -->
+<div id="mobile-menu"
+     class="lg:hidden absolute top-full left-0 mt-3 w-full
+       hidden overflow-hidden rounded-2xl
+       backdrop-blur-4xl backdrop-saturate-150
+       bg-black/40 border border-white/10
+       shadow-2xl shadow-black/40">
+
+    <div class="flex flex-col divide-y divide-white/10">
+        <a href="index.html" class="px-6 py-4 text-slate-200 hover:bg-white/10 transition">Home</a>
+        <a href="index.html#about" class="px-6 py-4 text-slate-200 hover:bg-white/10 transition">About</a>
+        <a href="event.html" class="px-6 py-4 text-slate-200 hover:bg-white/10 transition">Events</a>
+        <a href="#" class="px-6 py-4 text-slate-200 hover:bg-white/10 transition">Team</a>
+        <a href="index.html#contact" class="px-6 py-4 text-slate-200 hover:bg-white/10 transition">Contact</a>
+    </div>
+</div>
+
+
+</div>
+</nav>
+</header>
+
+
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  mobileMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+  });
+</script>
+
+<section class="leadership-section">
+
+      <div class="team-intro text-center mb-12">
+    <h2 class="text-4xl md:text-4xl font-bold mb-4 text-white">Our Leadership</h2><br>
+
+  <!-- TOP LEADERSHIP -->
+  <div class="top-leads">
+
+    <!-- HOD -->
+    <div class="lead-card" onclick="toggleCard(this)">
+      <div class="lead-header">
+        <img src="assets/Team members/HOD.png">
+        <div>
+          <div class="lead-name">Dr. Poonam Gupta</div>
+          <div class="lead-role">Head Of Department</div>
+        </div>
+      </div>
+      <div class="expandable">
+        <div class="lead-bio">
+          “Innovation begins when students are given the freedom to explore, create, and collaborate beyond textbooks.”
+        </div>
+      </div>
+    </div>
+
+    <!-- COORDINATOR -->
+    <div class="lead-card" onclick="toggleCard(this)">
+      <div class="lead-header">
+        <img src="assets/Team members/Club Coordinator.png">
+        <div>
+          <div class="lead-name">Ms. Juhi Agrawal (Assisstant Prof.)</div>
+          <div class="lead-role">Club Coordinator</div>
+        </div>
+      </div>
+      <div class="expandable">
+        <div class="lead-bio">
+          “The CSI Student Chapter GHRCEM is built to empower students to explore ideas, develop skills, and grow together as a strong community.”
+        </div>
+      </div>
+    </div>
+
+  </div></section>
+
+
+
+
+<section class="team-section">
+
+    <div class="team-intro text-center mb-12">
+    <h2 class="text-5xl md:text-5xl font-bold mb-4 text-white">Meet the CSI GHRCEM Team</h2>
+    <h5 class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto">Students, coders, and innovators making things happen.</h5>
+</div>
+
+<div class="team-container">
+    <!-- CARD 3 -->
+    <div class="lead-card" onclick="toggleCard(this)">
+        <div class="lead-header">
+            <img src="assets/Team members/President.png">
+            <div>
+                <div class="lead-name">Ojas Sonawane</div>
+                <div class="lead-role">Club President</div>
+            </div>
+        </div>
+
+        <div class="expandable">
+            <div class="lead-bio">
+                “Our vision is to create a space where ideas grow into impact through teamwork, creativity, and continuous learning.”
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="lead-card" onclick="toggleCard(this)">
+        <div class="lead-header">
+            <img src="assets/Team members/Vice President.png">
+            <div>
+                <div class="lead-name">Krishna Bawankule</div>
+                <div class="lead-role">Vice President</div>
+            </div>
+        </div>
+
+        <div class="expandable">
+            <div class="lead-bio">
+                “Strong teams are built through trust, collaboration, and a shared vision for growth.”
+
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="lead-card" onclick="toggleCard(this)">
+        <div class="lead-header">
+            <img src="assets/Team members/Technical_lead.png">
+            <div>
+                <div class="lead-name">Tanushree Menkudale</div>
+                <div class="lead-role">Technical Lead</div>
+            </div>
+        </div>
+
+        <div class="expandable">
+            <div class="lead-bio">
+                “Technology is not just about code, but about solving real problems and creating real impact.”
+            </div>
+            <div class="members">
+                <h4>Team Members</h4>
+                <div class="member-grid">
+                    <div class="member"><img src="assets/Team members/ChetanPatil_Technicalteam.jpg"><div class="member-name">Chetan Patil</div></div>
+                    <div class="member"><img src="assets/Team members/NandiniSrivastava_TechnicalTeam.jpeg"><div class="member-name">Nandini Sriavsatava</div></div>
+                    <div class="member"><img src="assets/Team members/KhushiYadav_TechenicalTeam.jpg"><div class="member-name">Khushi Yadav</div></div>
+                    <div class="member"><img src="assets/Team members/YogeshKankariya_TechnicalTeam.jpg"><div class="member-name">Yogesh Kankariya</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="lead-card" onclick="toggleCard(this)">
+        <div class="lead-header">
+            <img src="assets/Team members/Content_Lead.png">
+            <div>
+                <div class="lead-name">Samyak Ingle</div>
+                <div class="lead-role">Content Lead</div>
+            </div>
+        </div>
+
+        <div class="expandable">
+            <div class="lead-bio">
+                “Words have the power to shape identity, inspire action, and transform simple ideas into a powerful collective vision.”
+            </div>
+            <div class="members">
+                <h4>Team Members</h4>
+                <div class="member-grid">
+                    <div class="member"><img src="assets/Team members/Abhishek Thakre_content team.jpg"><div class="member-name">Abhishek Thakre</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD 7 -->
+    <div class="lead-card" onclick="toggleCard(this)">
+        <div class="lead-header">
+            <img src="assets/Team members/Design_Lead.png">
+            <div>
+                <div class="lead-name">Prakash Musmade</div>
+                <div class="lead-role">Design Lead</div>
+            </div>
+        </div>
+
+        <div class="expandable">
+            <div class="lead-bio">
+                “Design has the power to turn ideas into experiences that people remember.”
+            </div>
+            <div class="members">
+                <h4>Team Members</h4>
+                <div class="member-grid">
+                    <div class="member"><img src="assets/Team members/AkhileshDhumal_DesignTeam.jpg"><div class="member-name">Akhilesh Dhumal</div></div>
+                    <div class="member"><img src="assets/Team members/Anushka Dhavale_design team.jpg"><div class="member-name">Anushka Dhavale</div></div>
+                    <div class="member"><img src="assets/Team members/AnushkaSupekar_Design_.jpg"><div class="member-name">Anushka Supekar</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD 8 -->
+    <div class="lead-card" onclick="toggleCard(this)">
+        <div class="lead-header">
+            <img src="assets/Team members/PR&Marketing_Lead.png">
+            <div>
+                <div class="lead-name">Rohan Anmulwad</div>
+                <div class="lead-role">Public Relations and Marketing Lead</div>
+            </div>
+        </div>
+
+        <div class="expandable">
+            <div class="lead-bio">“Strong communication turns small efforts into big movements.”</div>
+            <div class="members">
+                <h4>Team Members</h4>
+                <div class="member-grid">
+                    <div class="member">
+                        <img src="assets/Team members/PURAB ROY_PR & MARKETING .png">
+                        <div class="member-name">Purab Roy</div>
+                    </div>
+                    <div class="member">
+                        <img src="assets/Team members/Sajida Jaiswar_PR TEAM .jpg">
+                        <div class="member-name">Sajida Jaiswar</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD 9 -->
+    <div class="lead-card" onclick="toggleCard(this)">
+        <div class="lead-header">
+            <img src="assets/Team members/EventManagement_Lead.png">
+            <div>
+                <div class="lead-name">Ketan Neware</div>
+                <div class="lead-role">Event Manangement Lead</div>
+            </div>
+        </div>
+
+        <div class="expandable">
+            <div class="lead-bio">
+                “Every event is an opportunity to bring people together, create meaningful experiences, and strengthen the spirit of our community.”
+            </div>
+            <div class="members">
+                <h4>Team Members</h4>
+                <div class="member-grid">
+                    <div class="member"><img src="assets/Team members/Kundan Deshmukh_Event.jpg"><div class="member-name">Kundan Deshmukh</div></div>
+                    <div class="member"><img src="assets/Team members/HiteshBorase_Event Management_.jpg"><div class="member-name">Hitesh Borase</div></div>
+                    <div class="member"><img src="assets/Team members/Himanshu_eventmanagement.jpg"><div class="member-name">Himanshu Singh</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</section>
+
+<!-- JS -->
+<script src="team.js"></script>
+
+<!-- Footer -->
+    <footer id="contact" class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-6">
+<p class="text-xs text-gray-500 mt-2 text-center">
+  © 2025 Computer Society of India – GHRCEM,Pune. All rights reserved.
+</p>
+        </div>
+</footer>
+</body>
+</html>

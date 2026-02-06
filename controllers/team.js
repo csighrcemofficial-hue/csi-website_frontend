@@ -7,3 +7,5 @@ function toggleCard(card) {
 
     content.classList.toggle("active");
 }
+
+

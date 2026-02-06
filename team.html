@@ -38,7 +38,7 @@ Student Chapter - GHRCEM</p>
 <a class="text-slate-300 hover:text-blue-500 font-medium" href="index.html#about">About</a>
 <a class="text-slate-300 hover:text-blue-500 font-medium" href="event.html">Events</a>
 <a class="text-slate-300 hover:text-blue-500 font-medium" href="#">Team</a>
-<a class="text-slate-300 hover:text-blue-500 font-medium" href="index.html#contact">Contact</a>
+<a class="text-slate-300 hover:text-blue-500 font-medium" href="#contact">Contact</a>
 </div>
 <div class="flex items-center gap-2">
 
@@ -60,7 +60,7 @@ Student Chapter - GHRCEM</p>
         <a href="index.html#about" class="px-6 py-4 text-slate-200 hover:bg-white/10 transition">About</a>
         <a href="event.html" class="px-6 py-4 text-slate-200 hover:bg-white/10 transition">Events</a>
         <a href="#" class="px-6 py-4 text-slate-200 hover:bg-white/10 transition">Team</a>
-        <a href="index.html#contact" class="px-6 py-4 text-slate-200 hover:bg-white/10 transition">Contact</a>
+        <a href="#contact" class="px-6 py-4 text-slate-200 hover:bg-white/10 transition">Contact</a>
     </div>
 </div>
 
@@ -144,7 +144,7 @@ Student Chapter - GHRCEM</p>
             <img src="assets/Team members/President.png">
             <div>
                 <div class="lead-name">Ojas Sonawane</div>
-                <div class="lead-role">Club President</div>
+                <div class="lead-role">President</div>
             </div>
         </div>
 
@@ -276,8 +276,8 @@ Student Chapter - GHRCEM</p>
         </div>
     </div>
 
-    <!-- CARD 9 -->
-    <div class="lead-card" onclick="toggleCard(this)">
+     <!-- CARD 9 -->
+        <div class="lead-card" onclick="toggleCard(this)">
         <div class="lead-header">
             <img src="assets/Team members/EventManagement_Lead.png">
             <div>
@@ -300,21 +300,64 @@ Student Chapter - GHRCEM</p>
             </div>
         </div>
     </div>
-
-
 </div>
+    
 </section>
 
 <!-- JS -->
-<script src="team.js"></script>
+<script src="controllers/team.js"></script>
 
-<!-- Footer -->
+  <!-- Footer -->
     <footer id="contact" class="bg-black text-white py-12">
         <div class="max-w-7xl mx-auto px-6">
+           <div class="grid md:grid-cols-2 gap-8">
+    <!-- Left side -->
+    <div>
+        <div class="flex items-center space-x-3 mb-6">
+            <img src="assets/logo.png" alt="CSI Logo" class="h-12 w-auto">
+            <div>
+                <h3 class="text-xl font-bold">CSI Student Chapter</h3>
+                <p class="text-gray-400 text-sm">GHRCEM</p>
+            </div>
+        </div>
+        <p class="text-gray-400 mb-6">
+            Empowering the next generation of IT professionals through innovation and collaboration.
+        </p>
+        <div class="flex space-x-4">
+            <a href="https://www.linkedin.com/in/computer-society-of-india-ghrcem/" class="text-gray-400 hover:text-white transition">
+                <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a href="https://www.instagram.com/csighrcem/" class="text-gray-400 hover:text-white transition">
+                <i class="fab fa-instagram text-xl"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Right side -->
+    <div class="md:justify-self-end text-right">
+        <h4 class="text-xl font-bold mb-6">Contact Us</h4>
+        <div class="space-y-3">
+            <p class="text-gray-400 hover:text-white transition"> <i class="fas fa-map-marker-alt mr-3"></i><a href="https://maps.app.goo.gl/ByBmhbvfKuGZhVzXA">GHRCEM, Pune</a> 
+            </p>
+
+            <p class="text-gray-400 hover:text-white transition"> <i class="fas fa-globe mr-3"></i><a href="https://ghrcemp.raisoni.net/">Visit our official Website</a> 
+            </p>
+
+            <p class="text-gray-400">
+                <i class="fas fa-envelope mr-3"></i> csighrcemofficial@gmail.com
+            </p>
+        </div>
+        
+    </div>
+    
+</div>
+</div>
+<br><br>
 <p class="text-xs text-gray-500 mt-2 text-center">
   © 2025 Computer Society of India – GHRCEM,Pune. All rights reserved.
 </p>
-        </div>
+</div>
 </footer>
+
 </body>
 </html>

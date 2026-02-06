@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+ <title>Event Timeline</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/mainController.js"></script>
+
+    <script src="controllers/timeline.js"></script>
+
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg-deep-navy: #0A192F;
+  --glass-bg: rgba(255,255,255,0.05);
+  --glass-border: rgba(255,255,255,0.1);
+  --glow-blue: rgba(37,99,235,0.6);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-deep-navy);
+  color: white;
+}
+
+.timeline-line::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.2),
+    rgba(255,255,255,0.05)
+  );
+}
+
+.event-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--glass-border);
+}
+
+.glow-point {
+  box-shadow: 0 0 20px var(--glow-blue);
+}
+.hidden {
+  display: none;
+}
+</style>
+</head>
+
+<body class="min-h-screen">
+
+  <header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl">
+<nav class="relative flex items-center justify-between p-4 rounded-xl shadow-lg glass-effect">
+<div class="flex items-center space-x-3">
+<img src="assets/LOGO.png" alt="CSI Logo" class="h-14 w-auto">
+<div class="hidden sm:flex flex-col justify-center">
+<h1 class="font-bold text-sm md:text-base text-white">
+Computer Society of India</h1>
+<p class="text-xs text-slate-300 leading-none mt-0.5">
+Student Chapter - GHRCEM</p>
+</div>
+</div>
+<div class="hidden lg:flex items-center space-x-8 ml-auto">
+<a class="text-slate-300 hover:text-blue-500 font-medium" href="index.html">Home</a>
+<a class="text-slate-300 hover:text-blue-500 font-medium" href="index.html#about">About</a>
+<a class="text-slate-300 hover:text-blue-500 font-medium" href="event.html">Events</a>
+<a class="text-slate-300 hover:text-blue-500 font-medium" href="team.html">Team</a>
+<a class="text-slate-300 hover:text-blue-500 font-medium" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-2">
+
+    <button id="menu-btn" class="lg:hidden text-gray-300 hover:text-white transition">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+
+
+<!-- Mobile Menu -->
+<div id="mobile-menu"
+     class="lg:hidden absolute top-full left-0 mt-3 w-full
+       hidden overflow-hidden rounded-2xl
+       backdrop-blur-4xl backdrop-saturate-150
+       bg-black/40 border border-white/10
+       shadow-2xl shadow-black/40">
+
+    <div class="flex flex-col divide-y divide-white/10">
+        <a href="index.html" class="px-6 py-4 text-slate-200 hover:bg-white/10 transition">Home</a>
+        <a href="index.html#about" class="px-6 py-4 text-slate-200 hover:bg-white/10 transition">About</a>
+        <a href="event.html" class="px-6 py-4 text-slate-200 hover:bg-white/10 transition">Events</a>
+        <a href="team.html" class="px-6 py-4 text-slate-200 hover:bg-white/10 transition">Team</a>
+        <a href="#contact" class="px-6 py-4 text-slate-200 hover:bg-white/10 transition">Contact</a>
+    </div>
+</div>
+
+
+</div>
+</nav>
+</header>
+
+
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  mobileMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+  });
+</script>
+
+
+<div>
+  <header class="px-6 pt-32 pb-20 max-w-[1200px] mx-auto">
+  <div class="relative flex items-center justify-center">
+
+    <!-- Back link (LEFT) -->
+    <a href="event.html"
+   class="absolute left-0 flex items-center gap-3 px-4 py-2 rounded-full
+          text-white/80 text-sm font-medium
+          bg-white/5 border border-white/10
+          transition-all duration-300
+          hover:text-white
+          hover:bg-blue-500/10
+          hover:shadow-[0_0_25px_rgba(59,130,246,0.7)]
+          hover:border-blue-400">
+
+  <span class="material-symbols-outlined text-xl">
+    arrow_back_ios_new
+  </span>
+  <span>Back to Years</span>
+</a>
+
+
+    <!-- Centered heading -->
+    <div class="text-center">
+      <h1 id="yearTitle" class="text-5xl font-bold mb-4"></h1>
+      <p id="yearDesc" class="text-white/60"></p>
+    </div>
+
+  </div>
+</header>
+
+
+  <main class="max-w-[1200px] mx-auto px-6 pb-32">
+    <div id="timelineContainer" class="relative timeline-line ml-4 md:ml-10"></div>
+  </main>
+</section>
+
+
+
+
+<!-- Footer -->
+    <footer id="contact" class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-6">
+           <div class="grid md:grid-cols-2 gap-8">
+    <!-- Left side -->
+    <div>
+        <div class="flex items-center space-x-3 mb-6">
+            <img src="assets/logo.png" alt="CSI Logo" class="h-12 w-auto">
+            <div>
+                <h3 class="text-xl font-bold">CSI Student Chapter</h3>
+                <p class="text-gray-400 text-sm">GHRCEM</p>
+            </div>
+        </div>
+        <p class="text-gray-400 mb-6">
+            Empowering the next generation of IT professionals through innovation and collaboration.
+        </p>
+        <div class="flex space-x-4">
+            <a href="https://www.linkedin.com/in/computer-society-of-india-ghrcem/" class="text-gray-400 hover:text-white transition">
+                <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a href="https://www.instagram.com/csighrcem/" class="text-gray-400 hover:text-white transition">
+                <i class="fab fa-instagram text-xl"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Right side -->
+    <div class="md:justify-self-end text-right">
+        <h4 class="text-xl font-bold mb-6">Contact Us</h4>
+        <div class="space-y-3">
+            <p class="text-gray-400 hover:text-white transition"> <i class="fas fa-map-marker-alt mr-3"></i><a href="https://maps.app.goo.gl/ByBmhbvfKuGZhVzXA">GHRCEM, Pune</a> 
+            </p>
+
+            <p class="text-gray-400 hover:text-white transition"> <i class="fas fa-globe mr-3"></i><a href="https://ghrcemp.raisoni.net/">Visit our official Website</a> 
+            </p>
+
+            <p class="text-gray-400">
+                <i class="fas fa-envelope mr-3"></i> csighrcemofficial@gmail.com
+            </p>
+        </div>
+        
+    </div>
+    
+</div>
+</div>
+<br><br>
+<p class="text-xs text-gray-500 mt-2 text-center">
+  © 2025 Computer Society of India – GHRCEM,Pune. All rights reserved.
+</p>
+</div>
+</footer>
+
+
+</body>
+</html>

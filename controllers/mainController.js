@@ -59,107 +59,21 @@ $scope.initBinaryAnimation();
         { year: '2020-21', students: 350 }
     ];
     
-    // Recent Activities
-    $scope.activities = [
-        {
-            title: "Pathway to GRE/GMAT Excellence",
-            date: "09/08/2024",
-            description: "Expert session focusing on preparation strategies for GRE/GMAT exams.",
-            tags: ["Expert Session", "Career"],
-            image: "assets/activity-images/gre-session.jpg"
-        },
-        {
-            title: "Frontend Designing with AngularJS",
-            date: "13-17/01/2025",
-            description: "5-day skill development program covering modern frontend development.",
-            tags: ["Workshop", "Web Development"],
-            image: "assets/activity-images/angular-workshop.jpg"
-        },
-        {
-            title: "Android App Development with Kotlin",
-            date: "03-04/04/2025",
-            description: "Hands-on workshop on building Android applications using Kotlin.",
-            tags: ["Workshop", "Mobile Development"],
-            image: "assets/activity-images/android-workshop.jpg"
-        },
-        {
-            title: "Salesforce - Decoding the Buzz",
-            date: "11/08/2023",
-            description: "Expert lecture on Salesforce platform and career opportunities.",
-            tags: ["Expert Lecture", "Cloud"],
-            image: "assets/activity-images/salesforce-session.jpg"
-        },
-        {
-            title: "IBM Cloud Skill Development",
-            date: "26-28/02/2024",
-            description: "3-day intensive program on IBM Cloud technologies and services.",
-            tags: ["Training", "Cloud Computing"],
-            image: "assets/activity-images/ibm-cloud.jpg"
-        },
-        {
-            title: "Higher Education in UK",
-            date: "26/10/2023",
-            description: "Expert session on higher education and work opportunities in United Kingdom.",
-            tags: ["Career", "Study Abroad"],
-            image: "assets/activity-images/uk-education.jpg"
-        }
-    ];
-    
+   
     // Upcoming Events
     $scope.upcomingEvents = [
         {
-            title: "AI/ML Workshop",
-            day: "15",
-            month: "Mar",
+            title: "Codex",
+            day: "04",
+            month: "Feb",
             time: "10:00 AM - 4:00 PM",
             description: "Hands-on workshop on Artificial Intelligence and Machine Learning fundamentals.",
-            type: "Workshop"
+            type: "Coding Competition"
         },
-        {
-            title: "Hackathon 2024",
-            day: "22",
-            month: "Mar",
-            time: "24 Hours",
-            description: "Annual coding competition with exciting prizes and recognition.",
-            type: "Competition"
-        },
-        {
-            title: "Industry Connect",
-            day: "05",
-            month: "Apr",
-            time: "2:00 PM - 5:00 PM",
-            description: "Networking session with IT industry leaders and recruiters.",
-            type: "Networking"
-        }
+        
     ];
     
-    // Winners/Achievements
-    $scope.winners = [
-        {
-            name: "Team Innovators",
-            position: "1st Place Hackathon 2023",
-            achievement: "Developed an AI-powered healthcare solution",
-            image: "assets/winners/team1.jpg"
-        },
-        {
-            name: "Sarah Johnson",
-            position: "Best Project Award",
-            achievement: "Blockchain-based voting system",
-            image: "assets/winners/student1.jpg"
-        },
-        {
-            name: "Tech Wizards",
-            position: "National Finalists",
-            achievement: "Represented college at national level competition",
-            image: "assets/winners/team2.jpg"
-        },
-        {
-            name: "Michael Chen",
-            position: "Research Excellence",
-            achievement: "Published paper in IEEE conference",
-            image: "assets/winners/student2.jpg"
-        }
-    ];
+  
     
     // Newsletter
     $scope.newsletterSubscribers = 1250;

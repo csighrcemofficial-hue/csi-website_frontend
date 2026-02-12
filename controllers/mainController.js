@@ -63,12 +63,12 @@ $scope.initBinaryAnimation();
     // Upcoming Events
     $scope.upcomingEvents = [
         {
-            title: "Codex",
-            day: "04",
+            title: "Code Quest",
+            day: "23",
             month: "Feb",
-            time: "10:00 AM - 4:00 PM",
-            description: "Hands-on workshop on Artificial Intelligence and Machine Learning fundamentals.",
-            type: "Coding Competition"
+            time: "10:00 AM - 2:00 PM",
+            description: "A two-round tech showdown where you prove your knowledge in a fast-paced quiz and race to victory in an exciting tech treasure hunt.",
+            type: "Technical Gaming"
         },
         
     ];

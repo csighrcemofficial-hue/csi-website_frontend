@@ -36,7 +36,7 @@ The primary objective was to design a clean, responsive, and user-friendly inter
 
 ## 🌍 Live Website
 
-🔗 [Visit the Website](https://csi-website-umber.vercel.app/)
+🔗 [Visit the Website](https://csi-websitefrontend.vercel.app/)
 
 ---
 
